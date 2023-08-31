@@ -1,0 +1,41 @@
+<div class="container-sm " style="width: 35rem;">
+  <h2>Form Job</h2>
+  <div class="card mb-3" style="padding: 15px;">
+    <div class="text-center mb-3 ">
+      <label for="companyName" class="form-label">Company Name</label>
+      <input type="text" class="form-control" id="companyName" placeholder="Company Name" name="companyName"
+        [(ngModel)]="jobOffer.companyName">
+    </div>
+    <div class="text-center mb-3">
+      <label for="jobTitle" class="form-label">Job Title</label>
+      <input type="text" class="form-control" id="jobTitle" placeholder="Type here" name="jobTitle"
+        [(ngModel)]="jobOffer.jobTitle">
+    </div>
+    <div class="text-center mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" placeholder="Type here" name="description"
+        [(ngModel)]="jobOffer.description">
+    </div>
+    <div class="text-center mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input type="text" class="form-control" id="location" placeholder="Type here" name="location"
+        [(ngModel)]="jobOffer.location">
+    </div>
+    <div class="text-center mb-3">
+      <label for="salary" class="form-label">Salary</label>
+      <input type="number" class="form-control" id="salary" placeholder="Type here" name="salary"
+        [(ngModel)]="jobOffer.salary">
+    </div>
+    <div class="text-center mb-3">
+      <label for="urlJobOffer" class="form-label">Url Job Offer</label>
+      <input type="text" class="form-control" id="urlJobOffer" placeholder="Type here" name="urlJobOffer"
+        [(ngModel)]="jobOffer.urlJobOffer">
+    </div>
+    <div class="d-grid gap-2 d-md-block d-grid gap-2 d-md-flex justify-content-md-end">
+      <button routerLink="" (click)="createJobOffer()" class="btn btn-primary" type="button">Save</button>
+      <button routerLink="" class="btn btn-secondary" type="button">Cancel</button>
+  </div>
+</div>
+<div class="card-footer text-body-secondary text-center fixed-bottom ">
+  Good lucky!
+</div>

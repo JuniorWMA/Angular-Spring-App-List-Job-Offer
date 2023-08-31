@@ -1,0 +1,40 @@
+<table class="table table-dark .table-bordered d-flex align-items-center justify-content-center" style="margin-top: 20px;">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Company Name</th>
+      <th>Job Title</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Salary</th>
+      <th>Date</th>
+      <th>Url Job Offer</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let job of joboffers; let i = index ">
+      <td>{{ i + 1}}</td>
+      <td>{{ job.companyName }}</td>
+      <td>{{ job.jobTitle }}</td>
+      <td>{{ job.description }}</td>
+      <td>{{ job.location }}</td>
+      <td>{{ job.salary | currency: 'BRL'}}</td>
+      <td>{{ job.date }}</td>
+      <td><a class="btn btn-primary " href="{{ job.urlJobOffer }}" target="_blank">Vaga</a></td>
+    </tr>
+  </tbody>
+</table>
+<div class="card text-center fixed-bottom" >
+  <div class="card-header"></div>
+
+  <div class="card-body ">
+    <h5 class="card-title">Cadastro de novas aplicações</h5>
+    <p class="card-text">Aqui você pode adicionar suas aplicações para vagas de estágio ou emprego</p>
+    <a routerLink="/form" href="#" class="btn btn-primary">Add here</a>
+  </div>
+  <div class="card-footer text-body-secondary">
+    Good lucky!
+  </div>
+</div>
